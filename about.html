@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hakkımızda | Sekomedi Car Parking</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* Index.html ile uyumlu LED / neon stil */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #ff0040, #00ffff, #ffb400, #00ff00, #ff00ff);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  color: #fff;
+  line-height: 1.5;
+}
+
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0,0,0,0.7);
+  box-shadow:0 0 20px #0ff,0 0 40px #ff0;
+}
+
+.led-title {
+  font-size: 3rem;
+  color: #0ff;
+  text-shadow:0 0 5px #0ff,0 0 10px #0ff,0 0 20px #0ff,0 0 40px #0ff;
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+  0% {text-shadow:0 0 5px #0ff,0 0 10px #0ff,0 0 20px #0ff,0 0 40px #0ff;}
+  50% {text-shadow:0 0 10px #ff0,0 0 20px #ff0,0 0 30px #ff0,0 0 60px #ff0;}
+  100% {text-shadow:0 0 5px #0ff,0 0 10px #0ff,0 0 20px #0ff,0 0 40px #0ff;}
+}
+
+nav ul {display:flex; justify-content:center; list-style:none; gap:25px; margin-top:15px;}
+nav a {text-decoration:none; font-weight:bold; color:#fff; text-shadow:0 0 5px #0ff; transition:0.3s;}
+nav a.active, nav a:hover {color:#ff0; text-shadow:0 0 20px #ff0,0 0 40px #ff0;}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+.led-box {
+  background-color: rgba(0,0,0,0.6);
+  border: 2px solid #0ff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0ff,0 0 40px #ff0,0 0 60px #ff0;
+  animation: boxGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes boxGlow {
+  0% {box-shadow:0 0 20px #0ff,0 0 40px #0ff,0 0 60px #0ff;}
+  50% {box-shadow:0 0 30px #ff0,0 0 50px #ff0,0 0 80px #ff0;}
+  100% {box-shadow:0 0 20px #0ff,0 0 40px #0ff,0 0 60px #0ff;}
+}
+
+footer {
+  background: rgba(0,0,0,0.7);
+  text-align:center;
+  padding:20px;
+  box-shadow:0 0 10px #0ff;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1 class="led-title">SEKOMEDI CAR PARKING</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="about.html" class="active">Hakkımızda</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="led-box">
+  <h2 class="led-title-small">Hakkımızda</h2>
+  <p>Bu platform, kullanıcıların ücretsiz hesap oluşturup oyun oynayabileceği, coin ve money kazanabileceği bir simülasyon deneyimi sunar. Araba satın alma ve park etme özellikleriyle gerçekçi bir deneyim hedeflenmiştir.</p>
+
+  <h3 class="led-title-small">Misyonumuz</h3>
+  <p>Kullanıcıların eğlenceli ve güvenli bir oyun deneyimi yaşamasını sağlamak.</p>
+
+  <h3 class="led-title-small">Vizyonumuz</h3>
+  <p>Türkiye’deki en popüler online car parking simülasyon platformu olmak.</p>
+</main>
+
+<footer>
+  <p>© 2025 Sekomedi Car Parking | Tüm hakları saklıdır.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* ===============================
+   GENEL AYARLAR
+================================ */
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  font-family:"Segoe UI", Arial, sans-serif;
+  background: linear-gradient(45deg, #ff0040, #00ffff, #ffb400, #00ff00, #ff00ff);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  color:#fff;
+  line-height:1.5;
+}
+
+@keyframes gradientBG {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+/* ===============================
+   HEADER
+================================ */
+header {
+  text-align:center;
+  padding:30px;
+  background: rgba(0,0,0,0.7);
+  box-shadow:0 0 20px #0ff,0 0 40px #ff0;
+}
+
+.led-title {
+  font-size:3rem;
+  color:#0ff;
+  text-shadow:0 0 5px #0ff,0 0 10px #0ff,0 0 20px #0ff,0 0 40px #0ff;
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+.led-title-small {
+  font-size:2rem;
+  color:#0ff;
+  text-shadow:0 0 5px #0ff,0 0 10px #0ff,0 0 20px #0ff;
+  animation: neonGlow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neonGlow {
+  0% {text-shadow:0 0 5px #0ff,0 0 10px #0ff,0 0 20px #0ff,0 0 40px #0ff;}
+  50% {text-shadow:0 0 10px #ff0,0 0 20px #ff0,0 0 30px #ff0,0 0 60px #ff0;}
+  100% {text-shadow:0 0 5px #0ff,0 0 10px #0ff,0 0 20px #0ff,0 0 40px #0ff;}
+}
+
+/* ===============================
+   NAVBAR
+================================ */
+nav ul {
+  display:flex;
+  justify-content:center;
+  list-style:none;
+  gap:25px;
+  margin-top:15px;
+}
+
+nav a {
+  text-decoration:none;
+  font-weight:bold;
+  color:#fff;
+  text-shadow:0 0 5px #0ff;
+  transition:0.3s;
+}
+
+nav a.active, nav a:hover {
+  color:#ff0;
+  text-shadow:0 0 20px #ff0,0 0 40px #ff0;
+}
+
+/* ===============================
+   LED BOX / PANEL
+================================ */
+main {
+  max-width:900px;
+  margin:40px auto;
+  padding:30px;
+}
+
+.led-box {
+  background-color: rgba(0,0,0,0.6);
+  border: 2px solid #0ff;
+  padding: 30px;
+  border-radius:15px;
+  box-shadow:0 0 20px #0ff,0 0 40px #ff0,0 0 60px #ff0;
+  animation: boxGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes boxGlow {
+  0% {box-shadow:0 0 20px #0ff,0 0 40px #0ff,0 0 60px #0ff;}
+  50% {box-shadow:0 0 30px #ff0,0 0 50px #ff0,0 0 80px #ff0;}
+  100% {box-shadow:0 0 20px #0ff,0 0 40px #0ff,0 0 60px #0ff;}
+}
+
+/* ===============================
+   FORM STİLİ
+================================ */
+label {
+  margin-top:10px;
+  display:block;
+  font-weight:bold;
+  color:#0ff;
+  text-shadow:0 0 3px #0ff;
+}
+
+input, textarea {
+  width:100%;
+  padding:12px;
+  margin-top:5px;
+  border-radius:8px;
+  border:2px solid #0ff;
+  background:#111;
+  color:#0ff;
+  font-weight:bold;
+  text-shadow:0 0 2px #0ff;
+  margin-bottom:15px;
+}
+
+input[type="checkbox"] {
+  width:auto;
+  margin-top:15px;
+}
+
+button.led-btn {
+  padding:15px 30px;
+  background:#0ff;
+  color:#111;
+  font-weight:bold;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  box-shadow:0 0 10px #0ff,0 0 20px #0ff;
+  transition:0.3s;
+  animation: buttonGlow 2s infinite alternate;
+}
+
+button.led-btn:hover {
+  background:#ff0;
+  box-shadow:0 0 20px #ff0,0 0 40px #ff0;
+}
+
+@keyframes buttonGlow {
+  0% {box-shadow:0 0 10px #0ff,0 0 20px #0ff;}
+  50% {box-shadow:0 0 20px #ff0,0 0 40px #ff0;}
+  100% {box-shadow:0 0 10px #0ff,0 0 20px #0ff;}
+}
+
+/* ===============================
+   OYUN PANELİ
+================================ */
+.game-buttons {
+  display:flex;
+  flex-wrap:wrap;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.game-buttons button.led-btn {
+  flex:1 1 180px;
+  padding:15px;
+  border:none;
+  border-radius:8px;
+  background:#0ff;
+  color:#111;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 0 10px #0ff,0 0 20px #0ff;
+  transition:0.3s;
+}
+
+.game-buttons button.led-btn:hover {
+  background:#ff0;
+  box-shadow:0 0 20px #ff0,0 0 40px #ff0;
+}
+
+.game-status p {
+  margin:8px 0;
+  font-weight:bold;
+  color:#0ff;
+  text-shadow:0 0 3px #0ff;
+}
+
+/* ===============================
+   FOOTER
+================================ */
+footer {
+  background: rgba(0,0,0,0.7);
+  text-align:center;
+  padding:20px;
+  box-shadow:0 0 10px #0ff;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width:768px){
+  nav ul {flex-wrap:wrap; gap:10px;}
+  .game-buttons {flex-direction:column;}
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bilgilerim | Sekomedi Car Parking</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+
+<header>
+  <h1 class="led-title">SEKOMEDI CAR PARKING</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Ana Sayfa</a></li>
+      <li><a href="profile.html" class="active">Bilgilerim</a></li>
+      <li><a href="about.html">Hakkımızda</a></li>
+      <li><a href="contact.html">İletişim</a></li>
+      <li><a href="news.html">Haberlerimiz</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="led-box">
+  <h2 class="led-title-small">Hesap Bilgilerim</h2>
+  
+  <p><strong>Kullanıcı ID:</strong> JM225118</p>
+  <p><strong>Ad:</strong> Ömer</p>
+  <p><strong>Soyad:</strong> Mutlu</p>
+  <p><strong>Anne İsmi:</strong> [Anne Adı]</p>
+  <p><strong>Baba İsmi:</strong> [Baba Adı]</p>
+  <p><strong>Gmail:</strong> [gmail@example.com]</p>
+  <p><strong>Coin:</strong> <span id="profileCoin">0</span></p>
+  <p><strong>Money:</strong> <span id="profileMoney">0</span></p>
+  <p><strong>Satın Alınan Arabalar:</strong> <span id="profileCars">0</span></p>
+  <p><strong>Hesap Durumu:</strong> Aktif</p>
+
+  <button class="led-btn" onclick="resetProfile()">Hesabı Sıfırla</button>
+</main>
+
+<footer>
+  <p>© 2025 Sekomedi Car Parking | Tüm hakları saklıdır.</p>
+</footer>
+
+<script>
+  // Profile sayfası için örnek veri
+  const profileCoin = document.getElementById("profileCoin");
+  const profileMoney = document.getElementById("profileMoney");
+  const profileCars = document.getElementById("profileCars");
+
+  // Coin, Money ve Araba sayısını localStorage veya JS ile buraya çekebilirsin
+  let coin = 10;   // Örnek değer
+  let money = 50;  // Örnek değer
+  let cars = 1;    // Örnek değer
+
+  profileCoin.textContent = coin;
+  profileMoney.textContent = money;
+  profileCars.textContent = cars;
+
+  function resetProfile() {
+    if(confirm("Hesabınızı sıfırlamak istediğinize emin misiniz?")) {
+      coin = 0;
+      money = 0;
+      cars = 0;
+      profileCoin.textContent = coin;
+      profileMoney.textContent = money;
+      profileCars.textContent = cars;
+      alert("Hesabınız sıfırlandı!");
+    }
+  }
+</script>
+
+</body>
+</html>
